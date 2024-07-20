@@ -3,6 +3,7 @@
 @section('title', 'Home Page')
 
 @section('content')
-<h1>Welcome to My Website</h1>
-<p>This is the home page.</p>
+    <div class="bg-blue-500 text-black p-4">
+        Hello, Tailwind CSS!
+    </div>
 @endsection
