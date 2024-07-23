@@ -22,8 +22,8 @@
     <nav>
         <div class="flex flex-row justify-between items-center bg-[#222222] px-[50px]">
             <div>
-                <a href="{{ url('/')}}">
-                    <img src="{{ asset('logo/white_logo.png')}}" alt="">
+                <a href="{{ url('/') }}">
+                    <img src="{{ asset('logo/white_logo.png') }}" alt="">
                 </a>
             </div>
             <div class="flex flex-row">
@@ -33,12 +33,13 @@
             </div>
             <div class="flex flex-row items-center">
                 @auth
-                    <a href="{{ url('/appointments')}}">
-                        {{ Auth::user()->first_name}}
-                    </a>    
+                    <a href="{{ url('/appointments') }}">
+                        {{ Auth::user()->first_name }}
+                    </a>
                 @else
-                    <a href="{{ route('login')}}" class="px-2 text-white">Login</a>
-                    <a href="{{ route('register')}}" class="px-3 py-3 rounded border border-blue hover:bg-[#69c4f9] bg-[#4EA5D9] text-[#222222]">Register</a>
+                    <a href="{{ route('login') }}" class="px-2 text-white">Login</a>
+                    <a href="{{ route('register') }}"
+                        class="px-3 py-3 rounded border border-blue hover:bg-[#69c4f9] bg-[#4EA5D9] text-[#222222]">Register</a>
                 @endauth
             </div>
         </div>
@@ -62,9 +63,9 @@
             </div>
             <div class="flex flex-col justify-center items-center">
                 <div>
-                    <img src="{{asset ('logo/square_white_logo.png')}}" alt="">
+                    <img src="{{ asset('logo/square_white_logo.png') }}" alt="">
                 </div>
-            </div>  
+            </div>
             <div class="w-1/4 flex flex-col justify-center items-center">
                 <div class="pb-4">
                     <h3 class="font-bold text-[#4EA5D9]">Check our Socials</h3>
@@ -81,7 +82,7 @@
         </div>
     </footer>
     <!-- Add your JavaScript files here -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    @vite('resources/js/app.js')
 </body>
 
 </html>
