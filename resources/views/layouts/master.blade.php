@@ -22,7 +22,9 @@
     <nav>
         <div class="flex flex-row justify-between items-center bg-[#222222] px-[50px]">
             <div>
-                <img src="{{ asset('logo/white_logo.png')}}" alt="">
+                <a href="{{ url('/')}}">
+                    <img src="{{ asset('logo/white_logo.png')}}" alt="">
+                </a>
             </div>
             <div class="flex flex-row">
                 <a href="#about" class="px-2 text-white">About</a>
@@ -44,8 +46,8 @@
     <main>
         @yield('content')
     </main>
-    <footer class="w-full fixed bottom-0">
-        <div class="bg-[#222222] text-[#FFFFFF] flex flex-row items-center justify-center">
+    <footer class="bg-[#222222] text-[#FFFFFF]">
+        <div class="flex flex-row items-center justify-center">
             <div class="w-1/4 flex flex-col justify-center items-center">
                 <div class="pb-4">
                     <h3 class="font-bold text-[#4EA5D9]">Head Office</h3>

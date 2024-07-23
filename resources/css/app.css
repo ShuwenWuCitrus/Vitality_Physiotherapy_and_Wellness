@@ -34,11 +34,11 @@ body {
     line-height: inherit
 }
 
-hr {
+/* hr {
     height: 0;
     color: inherit;
     border-top-width: 1px
-}
+} */
 
 abbr:where([title]) {
     -webkit-text-decoration: underline dotted;
@@ -127,7 +127,6 @@ select {
 [type=submit],
 button {
     -webkit-appearance: button;
-    background-color: transparent;
     background-image: none
 }
 

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Home Page')
+@section('title', 'Vitality | Home Page')
 
 @section('content')
 
