@@ -29,7 +29,11 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                inter: ['Inter', ...defaultTheme.fontFamily.sans]
             },
+            backgroundImage: {
+                'index-banner': "url('public/images/index-banner.png')"
+            }
         },
     },
 
