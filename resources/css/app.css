@@ -1,8 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-@tailwind utilities;
-=======
 @tailwind utilities;
 
 /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
@@ -891,4 +888,3 @@ video {
         --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity))
     }
 }
->>>>>>> 49ad8cae4aa4b1301d6224c312c6d023cf508fbf

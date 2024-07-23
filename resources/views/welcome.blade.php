@@ -3,7 +3,6 @@
 @section('title', 'Home Page')
 
 @section('content')
-<<<<<<< HEAD
 
 <section>
     <div class="h-[350px] bg-no-repeat bg-cover bg-[url('../../public/images/index-banner.png')]">
@@ -35,9 +34,4 @@
     </div>
 </section>
 
-=======
-    <div class="bg-blue-500 text-black p-4">
-        Hello, Tailwind CSS!
-    </div>
->>>>>>> 49ad8cae4aa4b1301d6224c312c6d023cf508fbf
 @endsection
