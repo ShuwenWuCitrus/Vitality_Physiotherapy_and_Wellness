@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="font-inter">
@@ -26,19 +26,18 @@
                 </a>
             </div>
             <div class="flex flex-row">
-                <a href="#about" class="px-2 text-white">About</a>
-                <a href="#services" class="px-2 text-white">Services</a>
-                <a href="#professionals" class="px-2 text-white">Professionals</a>
+                <a href="about" class="px-2 text-white">About</a>
+                <a href="services" class="px-2 text-white">Services</a>
+                <a href="professionals" class="px-2 text-white">Professionals</a>
             </div>
             <div class="flex flex-row items-center">
                 @auth
-                    <a href="{{ url('/appointments') }}">
-                        {{ Auth::user()->first_name }}
-                    </a>
+                <a href="{{ url('/my-appointments') }}">
+                    {{ Auth::user()->first_name }}
+                </a>
                 @else
-                    <a href="{{ route('login') }}" class="px-2 text-white">Login</a>
-                    <a href="{{ route('register') }}"
-                        class="px-3 py-3 rounded border border-blue hover:bg-[#69c4f9] bg-[#4EA5D9] text-[#222222]">Register</a>
+                <a href="{{ route('login') }}" class="px-2 text-white">Login</a>
+                <a href="{{ route('register') }}" class="px-3 py-3 rounded border border-blue hover:bg-[#69c4f9] bg-[#4EA5D9] text-[#222222]">Register</a>
                 @endauth
             </div>
         </div>

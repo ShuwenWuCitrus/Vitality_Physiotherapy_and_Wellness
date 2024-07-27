@@ -14,10 +14,10 @@ return [
     */
 
     'sets' => [
-        'default' => [
-            'path' => 'resources/svg',
-            'prefix' => 'icon',
-        ],
+        // 'default' => [
+        //     'path' => 'resources/svg',
+        //     'prefix' => 'icon',
+        // ],
         // 'default' => [
         //
         //     /*
