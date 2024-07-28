@@ -37,7 +37,11 @@
                 </div>
                 <div class="flex flex-col items-center justify-center">
                     <img src="{{ asset('icons/chiropractic.png') }}" alt="Chiropractor Icon" class="w-[50px] h-[50px] pb-3">
+<<<<<<< Updated upstream
                     <p>Chiropractor</p>
+=======
+                    <p>Chiropractic Therapy</p>
+>>>>>>> Stashed changes
                 </div>
                 <div class="flex flex-col items-center justify-center">
                     <img src="{{ asset('icons/massage.png') }}" alt="Massage Icon" class="w-[50px] h-[50px] pb-3">
@@ -53,12 +57,20 @@
                     <p>Nutritionist Consultations</p>
                 </div>
                 <div class="flex flex-col items-center justify-center">
+<<<<<<< Updated upstream
                     <img src="{{ asset('icons/shockwave_therapy.png') }}" alt="Acupunture Icon"
                         class="w-[50px] h-[50px] pb-3">
                     <p>Acupunture</p>
                 </div>
                 <div class="flex flex-col items-center justify-center">
                     <img src="{{ asset('icons/sport_physiotherapy.png') }}" alt="Shockwave Therapy Icon"
+=======
+                    <img src="{{ asset('icons/acupunture.png') }}" alt="Acupunture Icon" class="w-[50px] h-[50px] pb-3">
+                    <p>Acupuncture</p>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <img src="{{ asset('icons/shockwave_therapy.png') }}" alt="Shockwave Therapy Icon"
+>>>>>>> Stashed changes
                         class="w-[50px] h-[50px] pb-3">
                     <p>Shockwave Therapy</p>
                 </div>
