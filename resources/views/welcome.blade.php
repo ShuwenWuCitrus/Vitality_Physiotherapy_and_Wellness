@@ -37,7 +37,7 @@
                 </div>
                 <div class="flex flex-col items-center justify-center">
                     <img src="{{ asset('icons/chiropractic.png') }}" alt="Chiropractor Icon" class="w-[50px] h-[50px] pb-3">
-                    <p>Chiropractic Therapy</p>
+                    <p>Chiropractor</p>
                 </div>
                 <div class="flex flex-col items-center justify-center">
                     <img src="{{ asset('icons/massage.png') }}" alt="Massage Icon" class="w-[50px] h-[50px] pb-3">

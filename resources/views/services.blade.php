@@ -8,7 +8,7 @@
     </div>
     <div class="bg-yellow flex flex-col justify-center items-center pb-[56px]">
         <div>
-            <h1 class="font-bold text-[20px] py-[56px]">What are you looking for?</h1>
+            <h2 class="font-bold text-[20px] py-[56px]">What are you looking for?</h2>
         </div>
         <div class="grid grid-cols-4 grid-rows-2 font-[800] gap-y-16">
             @foreach ($services as $service)
