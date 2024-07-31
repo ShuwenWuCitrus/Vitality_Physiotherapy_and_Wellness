@@ -32,7 +32,7 @@
             </div>
             <div class="flex flex-row items-center">
                 @auth
-                    <a href="{{ url('/appointments') }}">
+                    <a class="text-blue font-bold" href="{{ url('/appointments') }}">
                         {{ Auth::user()->first_name }}
                     </a>
                 @else

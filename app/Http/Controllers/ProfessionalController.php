@@ -28,4 +28,22 @@ class ProfessionalController extends Controller
 
         return response()->json($professionals);
     }
+
+    public function showProfessionalsByService($serviceName)
+    {
+        $service = Service::where('name', $serviceName)->first();
+
+        if (!$service) {
+            return response()->json(['message' => 'Service not found'], 404);
+        }
+        $professionals = $service->professionals;
+
+        return view('professionals.by_service', compact('service', 'professionals'));
+    }
+
+    public function showAllProfessionals()
+    {
+        $professionals = Professional::all();
+        return view('professionals', compact('professionals'));
+    }
 }
