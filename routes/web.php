@@ -18,7 +18,7 @@ Route::get('/services', [ServiceController::class, 'showServices']);
 Route::get('/services/{serviceName}/professionals', [ProfessionalController::class, 'showProfessionalsByService'])->name('professionals.by_service');
 Route::get('/appointments/create/{service}/{professional}', [AppointmentController::class, 'createForm'])->name('appointments.schudule');
 Route::post('/appointments', [AppointmentController::class, 'store'])->name('appointments.store');
-Route::get('/my-appointments', [AppointmentController::class, 'userAppointments'])->name('user.appointments');
+Route::get('/appointments', [AppointmentController::class, 'userAppointments'])->name('user.appointments');
 Route::get('/appointments/{appointment}/edit', [AppointmentController::class, 'edit'])->name('appointments.edit');
 Route::put('/appointments/{appointment}', [AppointmentController::class, 'update'])->name('appointments.update');
 Route::delete('/appointments/{appointment}', [AppointmentController::class, 'destroy'])->name('appointments.destroy');
