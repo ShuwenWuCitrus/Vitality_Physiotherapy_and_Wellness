@@ -16,6 +16,13 @@ class ProfessionalController extends Controller
         return response()->json($professionals, 200);
     }
 
+    public function getAllProfessionals(): JsonResponse
+    {
+        $professionals = Professional::all();
+        return response()->json(['professionals' => $professionals]);
+    }
+
+
     public function getProfessionalsByService($serviceName): JsonResponse
     {
         $service = Service::where('name', $serviceName)->first();
@@ -39,11 +46,5 @@ class ProfessionalController extends Controller
         $professionals = $service->professionals;
 
         return view('professionals.by_service', compact('service', 'professionals'));
-    }
-
-    public function showAllProfessionals()
-    {
-        $professionals = Professional::all();
-        return view('professionals', compact('professionals'));
     }
 }
