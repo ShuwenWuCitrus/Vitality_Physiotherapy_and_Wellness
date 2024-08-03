@@ -18,12 +18,6 @@ class ServiceController extends Controller
     public function showServices()
     {
         $services = Service::all();
-        return view('services.allServices', compact('services'));
-    }
-
-    public function servicesPage()
-    {
-        $services = Service::all();
-        return view('services', compact('services'));
+        return view('services.services', compact('services'));
     }
 }
