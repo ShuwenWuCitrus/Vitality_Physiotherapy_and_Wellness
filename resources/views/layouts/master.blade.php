@@ -32,7 +32,7 @@
             </div>
             <div class="flex flex-row items-center">
                 @auth
-                    <a class="text-blue font-bold" href="{{ url('/appointments') }}">
+                    <a class="text-blue font-bold" href="{{ url('/my-appointments') }}">
                         {{ Auth::user()->first_name }}
                     </a>
                 @else
@@ -43,7 +43,7 @@
             </div>
         </div>
     </nav>
-    <main>
+    <main class="">
         @yield('content')
     </main>
     <footer class="bg-[#222222] text-[#FFFFFF]">

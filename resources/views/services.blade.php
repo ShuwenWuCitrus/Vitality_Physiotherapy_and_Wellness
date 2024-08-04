@@ -14,39 +14,8 @@
             @foreach ($services as $service)
                 <div class="flex flex-col items-center justify-center">
                     <div>
-                        @switch($service['name'])
-                            @case('Sport Physiotherapy')
-                                <img src="{{ asset('icons/sport_physiotherapy.png') }}" class="w-[50px] h-[50px] pb-3" alt="">
-                            @break
-
-                            @case('Chiropractic Therapy')
-                                <img src="{{ asset('icons/chiropractic.png') }}" class="w-[50px] h-[50px] pb-3" alt="">
-                            @break
-
-                            @case('Massage Therapy')
-                                <img src="{{ asset('icons/massage.png') }}" class="w-[50px] h-[50px] pb-3" alt="">
-                            @break
-
-                            @case('Physiotherapy')
-                                <img src="{{ asset('icons/physiotherapy.png') }}" class="w-[50px] h-[50px] pb-3" alt="">
-                            @break
-
-                            @case('Nutritionist Consultation')
-                                <img src="{{ asset('icons/nutritionist.png') }}" class="w-[50px] h-[50px] pb-3" alt="">
-                            @break
-
-                            @case('Acupuncture')
-                                <img src="{{ asset('icons/acupunture.png') }}" class="w-[50px] h-[50px] pb-3" alt="">
-                            @break
-
-                            @case('Shockwave Therapy')
-                                <img src="{{ asset('icons/shockwave_therapy.png') }}" class="w-[50px] h-[50px] pb-3" alt="">
-                            @break
-
-                            @case('Aquatherapy')
-                                <img src="{{ asset('icons/aquatherapy.png') }}" class="w-[50px] h-[50px] pb-3" alt="">
-                            @break
-                        @endswitch
+                        <img src="{{ asset('icons/' . $service['name'] . '.webp') }}" class="w-[50px] h-[50px] pb-3"
+                            alt="">
                     </div>
                     <div>
                         <p class="py-3"> {{ $service['name'] }} </p>
