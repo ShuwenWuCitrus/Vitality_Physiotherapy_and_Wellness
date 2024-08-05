@@ -17,43 +17,7 @@
                         <h3 class="font-bold">{{ $professional->name }}</h3>
                     </div>
                     <div class="my-2">
-                        <img class="w-[10rem] h-[10rem] pb-3"
-                            src="
-                        @switch($professional['name'])
-                            @case('Michael Villaflor')
-                                {{ asset('images/michael villaflor.jpeg') }}
-                                 @break
-                            @case('Jason Lee')
-                                {{ asset('images/jason lee.jpeg') }}
-                                 @break
-                            @case('Emily Sanchez')
-                                {{ asset('images/emily sanchez.jpeg') }}
-                                 @break
-                            @case('David Smith')
-                                {{ asset('images/david smith.jpeg') }}
-                                 @break
-                            @case('Karen Bongley')
-                                {{ asset('images/karen bongley.jpeg') }}
-                                 @break
-                            @case('Maira Costa')
-                                {{ asset('images/maira costa.jpeg') }}
-                                 @break
-                            @case('Nadia Smith')
-                                {{ asset('images/nadia smith.jpeg') }}
-                                 @break
-                            @case('Rachel Harris')
-                                {{ asset('images/rachel harris.jpeg') }}
-                                 @break
-                            @case('Sarah Patel')
-                                {{ asset('images/sarah patel.jpeg') }}
-                                 @break
-                            @case('Sophie Lambert')
-                                {{ asset('images/sophie lambert.jpeg') }}
-                                 @break
-                            @default
-                                //
-                        @endswitch
-                        "
+                        <img class="w-[10rem] h-[10rem] pb-3" src="{{ asset('images/' . $professional['name'] . '.webp') }}"
                             alt="">
                     </div>
                     <div>
@@ -68,18 +32,5 @@
                 <p>No professionals found for this service.</p>
             @endforelse
         </div>
-    </div>
-    {{-- <div class="flex flex-row">
-            @forelse($professionals as $professional)
-                <div class="professional-item">
-                    <h2>{{ $professional->name }}</h2>
-                    <a
-                        href="{{ route('appointments.schudule', ['service' => $service->id, 'professional' => $professional->id]) }}">Schedule
-                        Appointment</a>
-                </div>
-            @empty
-                <p>No professionals found for this service.</p>
-            @endforelse
-        </div> --}}
     </div>
 @endsection

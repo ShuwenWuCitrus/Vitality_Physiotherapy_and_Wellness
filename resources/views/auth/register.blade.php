@@ -70,7 +70,7 @@
                 </div>
             </form>
         </div>
-        <div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.jpg')]">
+        <div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.webp')]">
 
         </div>
 
