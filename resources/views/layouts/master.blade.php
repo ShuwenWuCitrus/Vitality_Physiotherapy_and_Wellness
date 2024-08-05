@@ -32,20 +32,18 @@
             </div>
             <div class="flex flex-row items-center">
                 @auth
-                    <a class="text-blue font-bold hover:text-[#75c5f4]" href="{{ url('/appointments') }}">
-                        {{ Auth::user()->first_name }}
+                <a class="text-blue font-bold hover:text-[#75c5f4]" href="{{ url('/appointments') }}">
+                    {{ Auth::user()->first_name }}
+                </a>
+                <form method="POST" action="{{ route('logout') }}" class="inline">
+                    @csrf
+                    <a href="{{ route('logout') }}" class="px-3 py-2 rounded text-white hover:text-[#cccccc]" onclick="event.preventDefault(); this.closest('form').submit();">
+                        Logout
                     </a>
-                    <form method="POST" action="{{ route('logout') }}" class="inline">
-                        @csrf
-                        <a href="{{ route('logout') }}" class="px-3 py-2 rounded text-white hover:text-[#cccccc]"
-                            onclick="event.preventDefault(); this.closest('form').submit();">
-                            Logout
-                        </a>
-                    </form>
+                </form>
                 @else
-                    <a href="{{ route('login') }}" class="px-2 text-white">Login</a>
-                    <a href="{{ route('register') }}"
-                        class="px-3 py-3 rounded border border-blue hover:bg-[#69c4f9] bg-[#4EA5D9] text-[#222222]">Register</a>
+                <a href="{{ route('login') }}" class="px-2 text-white">Login</a>
+                <a href="{{ route('register') }}" class="px-3 py-3 rounded border border-blue hover:bg-[#69c4f9] bg-[#4EA5D9] text-[#222222]">Register</a>
                 @endauth
             </div>
         </div>
