@@ -25,7 +25,11 @@ class AppointmentController extends Controller
         if (!$user) {
             return response()->json(['error' => 'User not found'], 404);
         }
-        $appointments = $user->appointments()->with(['professional', 'service'])->get();
+
+        $appointments = $user->appointments()
+            ->with(['professional', 'service'])
+            ->orderBy('date_time', 'asc')
+            ->get();
 
         return response()->json($appointments);
     }
@@ -129,18 +133,25 @@ class AppointmentController extends Controller
 
     private function getAvailableSlots(Professional $professional)
     {
-        // Implement logic to get available slots
-        $slots = [];
-        $startDate = now()->startOfDay();
-        $endDate = $startDate->copy()->addDays(7);
+        date_default_timezone_set('America/Toronto');
 
-        while ($startDate <= $endDate) {
-            for ($hour = 9; $hour < 17; $hour++) {
-                for ($minute = 0; $minute < 60; $minute += 30) {
-                    $dateTime = $startDate->copy()->setTime($hour, $minute);
-                    if (!$this->isSlotBooked($professional, $dateTime)) {
-                        $slots[] = $dateTime->format('Y-m-d H:i:s');
-                    }
+        $slots = [];
+        $startDate = now();
+        $endDate = $startDate->copy()->addDays(5);
+        while ($startDate->startOfDay() <= $endDate->startOfDay()) {
+            $isToday = $startDate->isToday();
+            $currentHour = $isToday ? max(now()->hour, 9) : 9; // Start from 9 AM or current hour, whichever is later
+
+            for ($hour = $currentHour; $hour < 17; $hour++) {
+                $dateTime = $startDate->copy()->setTime($hour, 0);
+
+                // Skip if the time has already passed
+                if ($dateTime->isToday() && $dateTime <= now()) {
+                    continue;
+                }
+
+                if (!$this->isSlotBooked($professional, $dateTime)) {
+                    $slots[] = $dateTime->format('Y-m-d H:i:s');
                 }
             }
             $startDate->addDay();
@@ -148,6 +159,7 @@ class AppointmentController extends Controller
 
         return $slots;
     }
+
 
     private function isSlotBooked(Professional $professional, $dateTime)
     {
@@ -205,15 +217,26 @@ class AppointmentController extends Controller
 
     public function edit(Appointment $appointment)
     {
-        // Add authorization check here if needed
-        return view('appointments.edit', compact('appointment'));
+        $professional = $appointment->professional;
+        $availableSlots = $this->getAvailableSlots($professional);
+
+        // Add the current appointment time to available slots if it's not already there
+        $currentAppointmentTime = $appointment->date_time instanceof \DateTime
+            ? $appointment->date_time->format('Y-m-d H:i:s')
+            : $appointment->date_time;
+        if (!in_array($currentAppointmentTime, $availableSlots)) {
+            $availableSlots[] = $currentAppointmentTime;
+        }
+
+        sort($availableSlots);
+
+        return view('appointments.edit', compact('appointment', 'availableSlots'));
     }
 
     public function update(Request $request, Appointment $appointment)
     {
-        // Add authorization check here if needed
         $request->validate([
-            'date_time' => 'required|date',
+            'date_time' => 'required|date_format:Y-m-d H:i:s',
         ]);
 
         $appointment->date_time = $request->date_time;
