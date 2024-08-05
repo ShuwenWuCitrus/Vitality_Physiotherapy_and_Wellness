@@ -59,7 +59,7 @@
                                 class="w-[100px] h-[100px] pb-3" alt="">
                         </div>
                         <div>
-                            <p><!-- Here we need to get the service each professional offers--></p>
+                            <p><!-- Here we need to get the service each professional has.--></p>
                         </div>
                     </div>
                 @endforeach
