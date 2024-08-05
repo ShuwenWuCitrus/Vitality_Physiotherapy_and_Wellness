@@ -40,17 +40,26 @@
                     <a href="{{ route('logout') }}" class="px-3 py-2 rounded border border-red-500 hover:bg-red-600 bg-red-500 text-white" onclick="event.preventDefault(); this.closest('form').submit();">
                         Logout
                     </a>
-                </form>
-                @else
-                <a href="{{ route('login') }}" class="px-2 text-white">Login</a>
-                <a href="{{ route('register') }}" class="px-3 py-3 rounded border border-blue hover:bg-[#69c4f9] bg-[#4EA5D9] text-[#222222]">Register</a>
-                @endauth
+                    <form method="POST" action="{{ route('logout') }}" class="inline">
+                        @csrf
+                        <a href="{{ route('logout') }}" class="px-3 py-2 rounded text-white hover:text-[#cccccc]" onclick="event.preventDefault(); this.closest('form').submit();">
+                            Logout
+                        </a>
+                    </form>
+                    @else
+                    <a href="{{ route('login') }}" class="px-2 text-white">Login</a>
+                    <a href="{{ route('register') }}" class="px-3 py-3 rounded border border-blue hover:bg-[#69c4f9] bg-[#4EA5D9] text-[#222222]">Register</a>
+                    @endauth
             </div>
         </div>
     </nav>
+
+    <!-- Dynamic content-->
     <main class="">
         @yield('content')
     </main>
+
+    <!-- Footer -->
     <footer class="bg-[#222222] text-[#FFFFFF]">
         <div class="flex flex-row items-center justify-center">
             <div class="w-1/4 flex flex-col justify-center items-center">

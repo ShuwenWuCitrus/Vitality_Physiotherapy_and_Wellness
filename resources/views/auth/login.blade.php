@@ -30,31 +30,63 @@
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
 
-                <!-- Button -->
-                <div class="mt-4 w-full block">
-                    <button type="submit" class="w-full text-white font-bold py-2 px-4 rounded hover:bg-[#69c4f9] bg-blue ease-in duration-200">
-                        Log in
-                    </button>
-                </div>
+                <<<<<<<<< Temporary merge branch 1 <!-- Remember Me -->
+                    <!-- <div class="block mt-4">
+                        <label for="remember_me" class="inline-flex items-center">
+                            <input id="remember_me" type="checkbox"
+                                class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500"
+                                name="remember">
+                            <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                        </label>
+                    </div> -->
+                    <div class="mt-4 w-full block">
+                        <button type="submit" class="w-full text-white font-bold py-2 px-4 rounded hover:bg-[#69c4f9] bg-blue ease-in duration-200">
+                            Log in
+                        </button>
+                    </div>
 
-                <div class="flex flex-col items-center justify-end mt-4 w-full">
-                    @if (Route::has('password.request'))
-                    <a class="underline text-xs text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                    <hr class="h-px w-full my-4 bg-gray-200 border-1 dark:bg-gray-700">
-                    @endif
-                </div>
-                <div class="mt-4">
-                    <a href="{{ route('register') }}" class="w-full text-xs text-white font-bold py-2 px-4 rounded hover:bg-[#e0b636] bg-yellow ease-in duration-200">
-                        Register
-                    </a>
-                </div>
+                    <div class="flex flex-col items-center justify-end mt-4 w-full">
+                        @if (Route::has('password.request'))
+                        <a class="underline text-xs text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                            {{ __('Forgot your password?') }}
+                        </a>
+                        <hr class="h-px w-full my-4 bg-gray-200 border-1 dark:bg-gray-700">
+                        @endif
+                    </div>
+                    <div class="mt-4">
+                        <a href="{{ route('register') }}" class="w-full text-xs text-white font-bold py-2 px-4 rounded hover:bg-[#e0b636] bg-yellow ease-in duration-200">
+                            Register
+                        </a>
+                    </div>
             </div>
         </form>
+        =========
+        <!-- Button -->
+        <div class="mt-4 w-full block">
+            <button type="submit" class="w-full text-white font-bold py-2 px-4 rounded hover:bg-[#69c4f9] bg-blue ease-in duration-200">
+                Log in
+            </button>
+        </div>
+
+        <div class="flex flex-col items-center justify-end mt-4 w-full">
+            @if (Route::has('password.request'))
+            <a class="underline text-xs text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
+                {{ __('Forgot your password?') }}
+            </a>
+            <hr class="h-px w-full my-4 bg-gray-200 border-1 dark:bg-gray-700">
+            @endif
+        </div>
+        <div class="mt-4">
+            <a href="{{ route('register') }}" class="w-full text-xs text-white font-bold py-2 px-4 rounded hover:bg-[#e0b636] bg-yellow ease-in duration-200">
+                Register
+            </a>
+        </div>
     </div>
-    <div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.webp')]">
-    </div>
+    </form>
+</div>
+<div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.webp')]">
+</div>
+>>>>>>>>> Temporary merge branch 2
 </div>
 <div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.jpg')]">
 </div>

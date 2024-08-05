@@ -22,6 +22,7 @@ class ProfessionalsTableSeeder extends Seeder
             ['name' => 'David Smith'],
             ['name' => 'Sophie Lambert'],
             ['name' => 'Rachel Harris'],
+            ['name' => 'Emily Sanchez'],
             ['name' => 'Nadia Smith']
         ]);
     }

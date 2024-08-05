@@ -33,17 +33,4 @@
             @endforelse
         </div>
     </div>
-    {{-- <div class="flex flex-row">
-            @forelse($professionals as $professional)
-                <div class="professional-item">
-                    <h2>{{ $professional->name }}</h2>
-                    <a
-                        href="{{ route('appointments.schudule', ['service' => $service->id, 'professional' => $professional->id]) }}">Schedule
-                        Appointment</a>
-                </div>
-            @empty
-                <p>No professionals found for this service.</p>
-            @endforelse
-        </div> --}}
-    </div>
 @endsection
