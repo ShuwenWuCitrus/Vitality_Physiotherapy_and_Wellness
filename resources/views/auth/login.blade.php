@@ -6,62 +6,61 @@
 
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-    <div class="flex flex-row">
-        <div class="w-1/3 p-5 flex flex-col justify-center items-center">
+    <div class="bg-yellow lg:flex">
+        <div class="lg:w-1/3 lg:h-auto h-screen flex flex-col justify-center items-center">
             <form method="POST" action="{{ route('login') }}">
-                <div class="flex flex-col justify-center items-center">
+                <div class="flex flex-col items-center space-y-5">
                     @csrf
-                    <div class="flex flex-col justify-center">
-                        <h1>Login</h1>
+                    <div class="">
+                        <h1 class="font-[900] text-[24px] text-black">Login</h1>
                     </div>
                     <!-- Email Address -->
                     <div>
                         <x-input-label for="email" :value="__('Email')" />
-                        <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                            required autofocus autocomplete="username" />
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        <x-text-input id="email" class="" type="email" name="email" :value="old('email')" required
+                            autofocus autocomplete="username" />
+                        <x-input-error :messages="$errors->get('email')" class="" />
                     </div>
 
                     <!-- Password -->
-                    <div class="mt-4">
+                    <div class="">
                         <x-input-label for="password" :value="__('Password')" />
 
-                        <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                        <x-text-input id="password" class="" type="password" name="password" required
                             autocomplete="current-password" />
 
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('password')" class="" />
                     </div>
 
                     <!-- Button -->
-                    <div class="mt-4 w-full block">
+                    <div class="w-full">
                         <button type="submit"
-                            class="w-full text-white font-bold py-2 px-4 rounded hover:bg-[#69c4f9] bg-blue ease-in duration-200">
-                            Log in
+                            class="w-full text-white shadow-xl font-bold py-2 px-4 rounded-full hover:bg-[#444444] bg-black ease-in duration-200">
+                            Login
                         </button>
                     </div>
 
-                    <div class="flex flex-col items-center justify-end mt-4 w-full">
+                    <div class="">
                         @if (Route::has('password.request'))
-                            <a class="underline text-xs text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                href="{{ route('password.request') }}">
+                            <a class="" href="{{ route('password.request') }}">
                                 {{ __('Forgot your password?') }}
                             </a>
-                            <hr class="h-px w-full my-4 bg-gray-200 border-1 dark:bg-gray-700">
+                            <hr class="border border-black my-4">
                         @endif
                     </div>
-                    <div class="mt-4">
-                        <a href="{{ route('register') }}"
-                            class="w-full text-xs text-white font-bold py-2 px-4 rounded hover:bg-[#e0b636] bg-yellow ease-in duration-200">
+                    <!-- Register -->
+                    <div class="pb-5">
+                        <a href="{{ route('register') }}" class="underline">
                             Register
                         </a>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.webp')]">
+        <div
+            class="hidden lg:flex lg:w-2/3 lg:h-[45rem] lg:bg-no-repeat lg:bg-cover lg:bg-center lg:bg-[url('../../public/images/login-banner.webp')]">
         </div>
     </div>
-    <div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.jpg')]">
-    </div>
+
     </div>
 @endsection
