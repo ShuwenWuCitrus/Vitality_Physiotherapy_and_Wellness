@@ -28,7 +28,6 @@ class AppointmentController extends Controller
 
         $appointments = $user->appointments()
             ->with(['professional', 'service'])
-            ->where('date_time', '>', now())
             ->orderBy('date_time', 'asc')
             ->get();
 
