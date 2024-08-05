@@ -3,13 +3,13 @@
 @section('title', 'Schedule')
 
 @section('content')
-    <section class="max-w-2xl mx-auto p-6 bg-white rounded-lg">
+    <section class="max-w-2xl mx-auto px-5 py-[5rem] rounded-lg">
         <div class="mb-6">
             <h1 class="text-2xl font-semibold text-gray-800">Editing your appointment on
                 {{ \Carbon\Carbon::parse($appointment->date_time)->format('M d, H:i') }} with
                 {{ $appointment->professional->name }}</h1>
         </div>
-        <div class="bg-yellow border border-yellow-300 rounded-xl p-5">
+        <div class="bg-white rounded-xl p-5">
             <div class="text-center mb-4">
                 <img src="{{ asset('icons/' . $appointment->service->name . '.webp') }}" class="mx-auto w-12 h-12 pb-3"
                     alt="">
@@ -27,7 +27,7 @@
                     </div>
                     <div class="flex justify-center">
                         <button type="submit"
-                            class="px-5 py-2 rounded-full hover:bg-[#69c4f9] bg-[#4EA5D9] text-[#222222]">Update
+                            class="px-5 py-2 rounded-full hover:bg-[#444444] bg-black text-white transition ease-in">Update
                             Appointment</button>
                     </div>
                 </form>
