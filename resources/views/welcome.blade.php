@@ -61,14 +61,39 @@
                 <img src="{{ asset('icons/acupunture.png') }}" alt="Acupunture Icon" class="w-[50px] h-[50px] pb-3">
                 <p>Acupuncture</p>
             </div>
-
-            <div class="flex flex-col items-center justify-center">
-                <img src="{{ asset('icons/shockwave_therapy.png') }}" alt="Shockwave Therapy Icon" class="w-[50px] h-[50px] pb-3">
-                <p>Shockwave Therapy</p>
-            </div>
-            <div class="flex flex-col items-center justify-center">
-                <img src="{{ asset('icons/aquatherapy.png') }}" alt="Sports Physiotherapy Icon" class="w-[50px] h-[50px] pb-3">
-                <p>Aquatherapy</p>
+            <div class="grid grid-cols-4 grid-rows-2 font-[800] gap-y-16">
+                <div class="flex flex-col items-center justify-center">
+                    <img src="{{ asset('icons/sport_physiotherapy.png') }}" alt="Sports Physiotherapy Icon" class="w-[50px] h-[50px] pb-3">
+                    <p>Sports Physiotherapy</p>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <img src="{{ asset('icons/chiropractic.png') }}" alt="Chiropractor Icon" class="w-[50px] h-[50px] pb-3">
+                    <p>Chiropractor</p>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <img src="{{ asset('icons/massage.png') }}" alt="Massage Icon" class="w-[50px] h-[50px] pb-3">
+                    <p>Massage Therapy</p>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <img src="{{ asset('icons/physiotherapy.png') }}" alt="Physiotherapy Icon" class="w-[50px] h-[50px] pb-3">
+                    <p>Physiotherapy</p>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <img src="{{ asset('icons/nutritionist.png') }}" alt="Nutritionist Icon" class="w-[50px] h-[50px] pb-3">
+                    <p>Nutritionist Consultations</p>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <img src="{{ asset('icons/shockwave_therapy.png') }}" alt="Acupunture Icon" class="w-[50px] h-[50px] pb-3">
+                    <p>Acupunture</p>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <img src="{{ asset('icons/sport_physiotherapy.png') }}" alt="Shockwave Therapy Icon" class="w-[50px] h-[50px] pb-3">
+                    <p>Shockwave Therapy</p>
+                </div>
+                <div class="flex flex-col items-center justify-center">
+                    <img src="{{ asset('icons/aquatherapy.png') }}" alt="Sports Physiotherapy Icon" class="w-[50px] h-[50px] pb-3">
+                    <p>Aquatherapy</p>
+                </div>
             </div>
         </div>
     </div>

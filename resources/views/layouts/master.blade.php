@@ -48,7 +48,7 @@
             </div>
         </div>
     </nav>
-    <main>
+    <main class="">
         @yield('content')
     </main>
     <footer class="bg-[#222222] text-[#FFFFFF]">

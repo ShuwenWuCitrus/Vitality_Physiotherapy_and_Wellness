@@ -30,15 +30,7 @@
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
 
-                <!-- Remember Me -->
-                <!-- <div class="block mt-4">
-                        <label for="remember_me" class="inline-flex items-center">
-                            <input id="remember_me" type="checkbox"
-                                class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500"
-                                name="remember">
-                            <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                        </label>
-                    </div> -->
+                <!-- Button -->
                 <div class="mt-4 w-full block">
                     <button type="submit" class="w-full text-white font-bold py-2 px-4 rounded hover:bg-[#69c4f9] bg-blue ease-in duration-200">
                         Log in
@@ -61,7 +53,10 @@
             </div>
         </form>
     </div>
-    <div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.jpg')]">
+    <div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.webp')]">
     </div>
+</div>
+<div class="w-2/3 h-[45rem] bg-no-repeat bg-cover bg-center bg-[url('../../public/images/login-banner.jpg')]">
+</div>
 </div>
 @endsection
