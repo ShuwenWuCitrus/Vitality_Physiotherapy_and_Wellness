@@ -17,7 +17,7 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="font-inter">
+<body class="flex flex-col min-h-screen font-inter">
     <nav class="bg-[#222222]">
         <div class="w-full flex items-center justify-between p-4">
             <div class="w-1/3">
@@ -50,7 +50,7 @@
     </nav>
 
     <!-- Dynamic content-->
-    <main class="">
+    <main class="bg-yellow flex-grow">
         @yield('content')
     </main>
 

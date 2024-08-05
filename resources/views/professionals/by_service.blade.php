@@ -4,20 +4,22 @@
 
 @section('content')
     <div>
-        <h1 class="font-bold text-[24px] px-[110px] py-[56px]">Schedule Your Appointment</h1>
+        <h1 class="bg-white font-bold text-[24px] px-[110px] py-[2rem] lg:text-left text-center">Schedule Your Appointment
+        </h1>
     </div>
-    <div class="bg-yellow flex flex-col justify-center items-center pb-[56px]">
+    <div class="bg-yellow flex flex-col justify-center items-center py-[5rem] text-center">
         <div>
-            <h2 class="font-bold text-[20px] py-[56px]">Select the professional for your session of {{ $service->name }}</h2>
+            <h2 class="font-bold text-[20px] px-[1rem] pb-[3rem]">Select the professional for your session of
+                {{ $service->name }}</h2>
         </div>
-        <div class="flex flex-row">
+        <div class="flex flex-col justify-center items-center space-y-[2rem] lg:flex-row lg:space-y-0 lg:space-x-[1rem]">
             @forelse($professionals as $professional)
-                <div class="mx-5 flex flex-col items-center justify-center">
+                <div class="flex flex-col justify-center items-center space-y-3">
                     <div>
                         <h3 class="font-bold">{{ $professional->name }}</h3>
                     </div>
-                    <div class="my-2">
-                        <img class="w-[10rem] h-[10rem] pb-3" src="{{ asset('images/' . $professional['name'] . '.webp') }}"
+                    <div class="">
+                        <img class="w-[10rem] h-[10rem]" src="{{ asset('images/' . $professional['name'] . '.webp') }}"
                             alt="">
                     </div>
                     <div>

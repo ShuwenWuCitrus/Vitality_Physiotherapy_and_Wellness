@@ -4,11 +4,12 @@
 
 @section('content')
     <div>
-        <h1 class="font-bold text-[24px] px-[110px] py-[56px]">Schedule Your Appointment</h1>
+        <h1 class="bg-white font-bold text-[24px] px-[110px] py-[2rem] text-center lg:text-left">Schedule Your Appointment
+        </h1>
     </div>
-    <div class="bg-yellow flex flex-col justify-center items-center pb-[9rem]">
+    <div class="bg-yellow flex flex-col justify-center items-center py-[3rem] text-center">
         <div>
-            <h2 class="font-bold text-[20px] pt-[56px]">For {{ $service->name }}, {{ $professional->name }} has the
+            <h2 class="font-bold text-[20px] px-[1rem]">For {{ $service->name }}, {{ $professional->name }} has the
                 following
                 timeslots available:</h2>
         </div>
