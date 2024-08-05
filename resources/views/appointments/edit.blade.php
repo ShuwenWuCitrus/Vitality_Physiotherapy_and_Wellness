@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Schedule')
+@section('title', 'Edit Appointment')
 
 @section('content')
     <section class="max-w-2xl mx-auto px-5 py-[5rem] rounded-lg">
@@ -20,10 +20,16 @@
                     @method('PUT')
                     <div class="form-group">
                         <label for="date_time" class="block text-sm font-medium text-gray-700">Date and Time</label>
-                        <input type="datetime-local"
+                        <select name="date_time" id="date_time"
                             class="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                            id="date_time" name="date_time"
-                            value="{{ \Carbon\Carbon::parse($appointment->date_time)->format('Y-m-d\TH:i') }}" required>
+                            required>
+                            @foreach ($availableSlots as $slot)
+                                <option value="{{ $slot }}"
+                                    {{ $slot == $appointment->date_time->format('Y-m-d H:i:s') ? 'selected' : '' }}>
+                                    {{ \Carbon\Carbon::parse($slot)->format('M d, Y H:i') }}
+                                </option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="flex justify-center">
                         <button type="submit"
@@ -32,6 +38,7 @@
                     </div>
                 </form>
             </div>
+        </div>
         </div>
     </section>
 @endsection
