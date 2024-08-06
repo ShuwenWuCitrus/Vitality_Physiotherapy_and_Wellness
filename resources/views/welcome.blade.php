@@ -1,3 +1,4 @@
+@extends('layouts.master')
 @section('title', 'Vitality | Home Page')
 
 @section('content')
@@ -21,6 +22,7 @@
         </div>
     </div>
 </section>
+
 <section id="services" class="pt-[40px] pb-[100px] bg-yellow">
     <div class="flex flex-col items-center justify-center text-[#222222]">
         <div class="pb-8">
@@ -40,6 +42,8 @@
                 @endforeach
             </div>
     </section>
+
+
     <section id="professionals" class="pt-[40px] pb-[100px]">
         <div class="flex flex-col items-center justify-center text-[#222222]">
             <div class="pb-8">
@@ -87,6 +91,5 @@
         </div>
     </div>
 </section>
-
 
 @endsection
