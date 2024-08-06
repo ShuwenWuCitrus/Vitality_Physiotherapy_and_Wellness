@@ -28,6 +28,19 @@
         <div class="pb-8">
             <h1 class="text-[24px] font-[900]">Services</h1>
         </div>
+        <div class="grid grid-cols-5 grid-rows-2 font-[800] gap-y-16">
+                @foreach ($services as $service)
+                    <div class="flex flex-col items-center justify-center">
+                        <div>
+                            <p class="py-3"> {{ $service['name'] }} </p>
+                        </div>
+                        <div>
+                            <img src="{{ asset('icons/' . $service['name'] . '.webp') }}"
+                                class="w-[100px] h-[100px] pb-3" alt="">
+                        </div>
+                    </div>
+                @endforeach
+            </div>
     </section>
     <section id="professionals" class="pt-[40px] pb-[100px]">
         <div class="flex flex-col items-center justify-center text-[#222222]">
