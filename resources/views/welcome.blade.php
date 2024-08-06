@@ -45,12 +45,13 @@
                                 class="w-[100px] h-[100px] pb-3" alt="">
                         </div>
                         <div>
-                        <ul class="text-sm">
-                            @foreach ($professional['services'] as $service)
-                                <li>{{ $service['name'] }}</li>
-                            @endforeach
-                        </ul>
-                            <p><!-- Here we need to get the service each professional has.-->XX</p>
+                            <p>
+                                <ul class="text-sm">
+                                    @foreach ($professional['services'] as $service)
+                                        <li>{{ $service['name'] }}</li>
+                                    @endforeach
+                                </ul>
+                            </p>
                         </div>
                     </div>
                 @endforeach
