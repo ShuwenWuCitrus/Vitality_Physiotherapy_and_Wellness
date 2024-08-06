@@ -47,4 +47,10 @@ class ProfessionalController extends Controller
 
         return view('professionals.by_service', compact('service', 'professionals'));
     }
+
+    public function getAllProfessionals(): JsonResponse
+    {
+        $professionals = Professional::with('services')->get();
+        return response()->json(['professionals' => $professionals]);
+    }
 }
