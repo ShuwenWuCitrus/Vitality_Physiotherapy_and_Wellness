@@ -1,4 +1,5 @@
-@section('title', 'Vitality | Home Page')
+Hola mundo
+<!--@section('title', 'Vitality | Home Page')
 
 @section('content')
 
@@ -89,4 +90,4 @@
 </section>
 
 
-@endsection
+@endsection -->
