@@ -60,6 +60,21 @@
     </div>
 </section>
 
+<section id="about" class="pt-[40px] pb-[100px] bg-gray-200">
+    <div class="flex flex-col items-center justify-center text-[#222222]">
+        <div class="pb-8">
+            <h1 class="text-[24px] font-[900]">About Us</h1>
+        </div>
+        <div class="max-w-[800px] text-center text-[16px]">
+            <p>
+                At Vitality, we believe in empowering your health and revitalizing your life. Our dedicated team of professionals is here to provide personalized services designed to meet your unique needs. Whether you're looking to improve your physical health, mental well-being, or overall lifestyle, we have the expertise and resources to help you achieve your goals.
+            </p>
+            <p class="mt-4">
+                Our mission is to create a supportive and nurturing environment where you can thrive. We are committed to delivering the highest quality of care and ensuring that each visit leaves you feeling rejuvenated and inspired.
+            </p>
+        </div>
+    </div>
+</section>
 
 
 @endsection
