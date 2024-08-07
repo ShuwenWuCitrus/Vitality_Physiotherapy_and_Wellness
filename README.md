@@ -1,66 +1,113 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Vitality Wellness
+Vitality Wellness is a  web application designed to allow users to create, read, update and delete appointments, integrating a Blade frontend with a Laravel backend. This README provides a detailed explanation of the application, its components, and how to get started.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Table of Contents
+- [Introduction](#introduction)
+- [Technologies Used](#technologies-used)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [Conclusion](#conclusion)
 
-## About Laravel
+## Introduction
+This application was conceived as a comprehensive solution for managing appointments, offering seamless integration of a dynamic Blade front-end and a robust, scalable Laravel back-end. This amalgamation of technologies ensures that developers can focus on building features without the usual setup overhead. 
+Built as a Capstone Project for [WDIA's level 3 class, Web Applications Development](https://www.algonquincollege.com/sat/program/web-development-internet-applications/#courses), this application demonstrates the power and flexibility of modern web development frameworks.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Technologies Used
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Frontend
+- **HTML**: Markup language used for structuring the web pages.
+- **Blade**: Laravel's templating engine used for rendering views.
+- **Tailwind CSS**: Utility-first CSS framework used for styling the application.
+- **JavaScript**: Used for client-side interactivity and dynamic content.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Backend
+- **Laravel**: PHP framework used for building the web application's backend.
+- **PHP**: Server-side scripting language used by Laravel.
+- **MySQL**: SQL database used for data storage and retrieval.
 
-## Learning Laravel
+### Tools and Utilities
+- **Composer**: Dependency management tool for PHP, used to manage Laravel and other PHP packages.
+- **NPM/Yarn**: Package managers for JavaScript, used to manage Tailwind CSS and other front-end dependencies.
+- **Artisan**: Laravel's command-line interface used for various development tasks.
+- **Sanctum**: Laravel package used for API authentication and managing user sessions.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Installation
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+To set up the Vitality Wellness application on your local machine, this tutorial assumes you have Laragon/XAMPP (Windows) or Valet (macOS):
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Clone the Repository on C:\laragon\www**:
+    ```bash
+    https://github.com/ShuwenWuCitrus/Vitality_Physiotherapy_and_Wellness.git
+    cd Vitality_Physiotherapy_and_Wellness
+    ```
 
-## Laravel Sponsors
+2. **Use Laragon's Terminal to Install PHP Dependencies**:
+    Make sure you have Composer installed. Then run:
+    ```bash
+    composer install
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+3. **Install JavaScript Dependencies**:
+    Make sure you have Node.js and NPM or Yarn installed. Then run:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
 
-### Premium Partners
+4. **Set Up Environment Variables**:
+    Copy the `.env.example` file to `.env` and configure your environment variables, especially the database settings.
+    ```bash
+    cp .env.example .env
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+5. **Generate Application Key**:
+    ```bash
+    php artisan key:generate
+    ```
 
-## Contributing
+6. **Run Database Migrations and Seeders**:
+    Ensure your database is set up and configured in the `.env` file. Then run:
+    ```bash
+    php artisan migrate --seed
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+7. **Build Frontend Assets**:
+    Use Vite to build the frontend assets:
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
 
-## Code of Conduct
+## Running the Application
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+To run the Vitality Wellness application, follow these steps:
 
-## Security Vulnerabilities
+1. **Start the Development Server**:
+    If you are using Laragon, XAMPP, or Valet, ensure your local server is running. Then start the Laravel development server:
+    ```bash
+    php artisan serve
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2. **Run Vite in Watch Mode**:
+    To automatically rebuild frontend assets during development, run Vite in watch mode:
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
 
-## License
+3. **Access the Application**:
+    Open your web browser and navigate to `http://localhost:8000` (or the URL provided by your local server setup).
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Now you should be able to access and interact with the Vitality Wellness application on your local machine.
+
+## Conclusion
+This web application is intended to fulfill the professor's requirements for the Capstone Project.
+
+---
+
+**Made by [Arthur Duarte](https://github.com/o2thur), [Shuwen Wu](https://github.com/ShuwenWuCitrus) and [Ernesto Dávila](https://github.com/ernestodavilacardona)**
