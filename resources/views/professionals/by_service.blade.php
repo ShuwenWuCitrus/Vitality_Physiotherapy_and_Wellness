@@ -24,7 +24,7 @@
                     </div>
                     <div>
                         <div>
-                            <button class="bg-blue py-2 px-5 rounded-3xl"><a
+                            <button class="bg-blue font-600 py-2 px-5 rounded-3xl transition ease-in hover:bg-[#69c4f9]"><a
                                     href="{{ route('appointments.schudule', ['service' => $service->id, 'professional' => $professional->id]) }}">Select
                                     {{ explode(' ', $professional->name)[0] }}</a></button>
                         </div>

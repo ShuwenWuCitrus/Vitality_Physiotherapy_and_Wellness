@@ -3,8 +3,8 @@
 @section('title', 'User Appointments')
 
 @section('content')
-    <section class="px-[5rem]">
-        <div class="py-[5rem] text-center lg:text-left">
+    <section class="">
+        <div class="py-[3rem] px-[5rem] text-center lg:text-left bg-white">
             <h1 class="font-bold text-[24px]">My Appointments</h1>
             <h3 class="font-bold text-[18px]">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h3>
             @if (session('success'))
@@ -20,8 +20,8 @@
                 return \Carbon\Carbon::parse($appointment->date_time)->isPast();
             });
         @endphp
-        <h2 class="font-bold text-[20px] mb-4 text-center lg:text-left ">Upcoming Appointments</h2>
-        <div class="flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5 pb-[3rem]">
+        <h2 class="px-[5rem] pt-[3rem] font-bold text-[20px] mb-4 text-center lg:text-left ">Upcoming Appointments</h2>
+        <div class="px-[5rem] flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5 pb-[3rem]">
             @if ($futureAppointments->isEmpty())
                 <p class="text-gray-600">You have no upcoming appointments.</p>
             @else
@@ -57,7 +57,7 @@
                 @endforeach
             @endif
         </div>
-        <div>
+        <div class="px-[5rem] py-[3rem]">
             <h2 class="font-bold text-[20px] mb-4 lg:text-left text-center">Past Appointments</h2>
             <div class="flex flex-row flex-wrap gap-5 pb-[3rem]">
                 @if ($pastAppointments->isEmpty())

@@ -11,7 +11,7 @@
         <div>
             <h2 class="font-bold text-[20px] px-[1rem] pb-[3rem]">What are you looking for?</h2>
         </div>
-        <div class="grid font-[800] grid-cols-2 gap-y-16 lg:grid-cols-4 lg:grid-rows-2 lg:gap-y-16">
+        <div class="grid  grid-cols-2 gap-y-16 lg:grid-cols-4 lg:grid-rows-2 lg:gap-y-16">
             @foreach ($services as $service)
                 <div class="flex flex-col justify-center items-center space-y-2">
                     <div>
@@ -19,10 +19,10 @@
                             alt="">
                     </div>
                     <div>
-                        <p class="text-center"> {{ $service['name'] }} </p>
+                        <p class="text-center font-[800]"> {{ $service['name'] }} </p>
                     </div>
                     <div>
-                        <button class="bg-blue py-2 px-5 rounded-3xl"><a
+                        <button class="bg-blue font-600 py-2 px-5 rounded-3xl transition ease-in hover:bg-[#69c4f9]"><a
                                 href="{{ route('professionals.by_service', ['serviceName' => $service['name']]) }}">Select</a></button>
                     </div>
                 </div>
