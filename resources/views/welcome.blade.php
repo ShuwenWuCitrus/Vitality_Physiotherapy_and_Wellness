@@ -23,21 +23,21 @@
     </div>
 </section>
 
-<section id="services" class="pt-8 sm:pt-[40px] pb-16 sm:pb-[100px] bg-yellow">
+<section id="services" class="pt-8 sm:pt-[40px] pb-16 sm:pb-[100px] bg-yellow px-4 sm:px-8">
     <div class="flex flex-col items-center justify-center text-[#222222]">
         <div class="pb-4 sm:pb-8">
             <h1 class="text-xl sm:text-[24px] font-[900]">Services</h1>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 font-[800]">
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-8 font-[800] text-center">
             @foreach ($services as $service)
                 <div class="flex flex-col items-center justify-center">
                     <div>
-                        <p class="py-2 sm:py-3"> {{ $service['name'] }} </p>
+                        <img src="{{ asset('icons/' . $service['name'] . '.webp') }}"
+                            class="w-[50px] h-[50px] pb-2 sm:pb-3" alt="">
                     </div>
                     <div>
-                        <img src="{{ asset('icons/' . $service['name'] . '.webp') }}"
-                            class="w-[70px] h-[70px] pb-2 sm:pb-3" alt="">
-                    </div>
+                        <p class="py-2 sm:py-3 font-bold text-[14px]"> {{ $service['name'] }} </p>
+                    </div>                    
                 </div>
             @endforeach
         </div>
@@ -53,17 +53,22 @@
             @foreach ($professionals as $professional)
                 <div class="flex flex-col items-center justify-start h-full">
                     <div>
-                        <p class="py-2 sm:py-3 font-[800]"> {{ $professional['name'] }} </p>
+                        <p class="py-2 sm:py-3 font-bold text-xs"> {{ $professional['name'] }} </p>
                     </div>
                     <div>
                         <img src="{{ asset('images/' . $professional['name'] . '.webp') }}"
-                            class="w-[100px] h-[100px] pb-2 sm:pb-3" alt="">
+                            class="w-[150px] h-[150px] pb-2 sm:pb-3" alt="">
                     </div>
                     <div>
                         <p>
-                            <ul class="text-sm">
-                                @foreach ($professional['services'] as $service)
-                                    <li>{{ $service['name'] }}</li>
+                            <ul class="text-xs text-center">
+                                @foreach ($professional['services'] as $index => $service)
+                                    <li class="">
+                                        {{ $service['name'] }}
+                                        @if ($index < count($professional['services']) - 1)
+                                            <span">,</span>
+                                        @endif
+                                    </li>
                                 @endforeach
                             </ul>
                         </p>
