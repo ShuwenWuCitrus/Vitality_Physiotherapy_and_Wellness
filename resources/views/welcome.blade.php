@@ -63,10 +63,10 @@
                         <p>
                             <ul class="text-xs text-center">
                                 @foreach ($professional['services'] as $index => $service)
-                                    <li class="">
-                                        {{ $service['name'] }}
+                                    <li>
+                                        {{ $service['name']}}
                                         @if ($index < count($professional['services']) - 1)
-                                            <span">,</span>
+                                            <span>,</span>
                                         @endif
                                     </li>
                                 @endforeach
