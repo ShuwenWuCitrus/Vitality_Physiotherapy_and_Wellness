@@ -48,8 +48,12 @@ class OccupationAreasTableSeeder extends Seeder
             ['service_id' => 3, 'professional_id' => 8], // Massage Therapy
             ['service_id' => 1, 'professional_id' => 8], // Sport Physiotherapy
 
+            // Emily Sanchez
+            ['service_id' => 6, 'professional_id' => 9], // Acupuncturist
+            ['service_id' => 2, 'professional_id' => 9], // Shockwave Therapy
+
             // Nadia Smith
-            ['service_id' => 7, 'professional_id' => 9], // Aquatherapy
+            ['service_id' => 7, 'professional_id' => 10], // Aquatherapy
         ];
 
         // Insert occupation areas into the database
